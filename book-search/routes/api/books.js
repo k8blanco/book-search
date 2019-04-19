@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
-const gbAPIcontroller = require("../../controllers/gbAPIcontroller");
 
 //Get books and post books to DB
 router.route("/api/saved")
