@@ -21,6 +21,7 @@ class Saved extends Component {
     };
 
     render() {
+        return (
         <div>
             <div className="container">
                 {this.state.books.length ? (
@@ -43,6 +44,7 @@ class Saved extends Component {
                 }
             </div>
         </div>
+        )
     }
 }
 
