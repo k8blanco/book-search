@@ -2,7 +2,7 @@ const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 
 //Get books and post books to DB
-router.route("/api/saved")
+router.route("/books/saved")
     //route to get all saved books
     .get(booksController.findAll)
     // .post(booksController.create);
