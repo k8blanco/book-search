@@ -39,27 +39,6 @@ class Books extends Component {
      console.log(this.state.search);
   }
 
-  // handleSave = event => {
-  //   console.log("save event")
-  //   event.preventDefault();
-  //   if (this.state.title && this.state.author) {
-  //     API.saveBook({
-  //       key: this.book.id,
-  //       title: this.state.title,
-  //       author: this.state.author,
-  //       synopsis: this.state.synopsis,
-  //       thumbnail: this.state.thumbnail
-  //     })
-  //       // .then(res => this.saveToast())
-  //       // .then(res => this.loadBooks())
-  //       .then(console.log("book saved"))
-  //       .catch(err => console.log(err));
-  //   }
-  // }
-
-  saveToast = event => {
-    //code to create "Book Saved!" toast
-  }
 
   render() {
     return (

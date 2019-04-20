@@ -17,14 +17,19 @@ class Saved extends Component {
         this.loadBooks();
     }
 
+    // loadBooks = () => {
+    //     API.getBooks()
+    //       .then(res =>
+    //         this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+    //       )
+    //       .catch(err => console.log(err));
+    //   };
+
     loadBooks = () => {
         API.getBooks()
-          .then(res =>
-            this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-          )
-          .catch(err => console.log(err));
-      };
-
+            .then(res => this.setState({ books: res.data }))
+            .catch(err => console.log(err));
+    }
     
     // Deletes a book from the database with a given id, then reloads books from the db
     deleteBook = id => {

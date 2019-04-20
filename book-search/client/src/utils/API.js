@@ -7,7 +7,8 @@ const API_KEY = process.env.REACT_APP_APIKEY;
 export default {
   // Gets all books
   getBooks: function() {
-    return axios.get("/api/books");
+    // return axios.get("/api/books");
+    return axios.get("/api/books")
   },
   // Searches google API
   queryAPI: function(query) {

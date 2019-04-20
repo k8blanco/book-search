@@ -19,7 +19,8 @@ class ComponentItem extends Component {
                 title: this.props.title,
                 author: this.props.author,
                 synopsis: this.props.synopsis,
-                thumbnail: this.props.thumbnail
+                thumbnail: this.props.thumbnail,
+                isSaved: true
             })
                 .then(console.log("book saved"))
                 .catch(err => console.log(err));
