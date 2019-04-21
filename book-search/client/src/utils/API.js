@@ -1,6 +1,6 @@
 import axios from "axios";
 const BASEURL = `https://www.googleapis.com/books/v1/volumes?q=`;
-const queryParams = `&printType=books&orderBy=relevance&maxResults=1&key=`;
+const queryParams = `&printType=books&orderBy=relevance&maxResults=4&key=`;
 // const apiKey = process.env.REACT_APP_GB_APIKEY;
 const API_KEY = process.env.REACT_APP_APIKEY;
 
@@ -21,6 +21,7 @@ export default {
   },
   // Saves a book to the database
   saveBook: function(bookData) {
+    console.log(bookData);
     return axios.post("/api/books", bookData);
   }
 

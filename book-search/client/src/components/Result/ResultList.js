@@ -5,11 +5,11 @@ import "./style.css";
 
 export function ResultList({ children }) {
     return (
-        <div className="row">
-            <div className="col s12">
+        // <div className="row">
+            <div className="container">
                 <ul className="collection with-header">{children}</ul>
             </div>
-        </div>
+        // </div>
     );
 }
 

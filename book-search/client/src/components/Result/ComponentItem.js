@@ -22,10 +22,16 @@ class ComponentItem extends Component {
                 thumbnail: this.props.thumbnail,
                 isSaved: true
             })
-                .then(console.log("book saved"))
+                .then(res => this.loadBooks())
                 .catch(err => console.log(err));
-    }
+    } 
 
+
+    loadBooks = () => {
+        API.getBooks()
+            .then(res => this.setState({ books: res.data }))
+            .catch(err => console.log(err));
+    }
 
 
     render() {

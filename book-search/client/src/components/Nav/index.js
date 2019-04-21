@@ -5,9 +5,10 @@ function Nav() {
   return (
     <nav>
     <div className="nav-wrapper z-depth-3">
-      <h1 className="brand-logo hide-on-med-and-down">
-      Google Book Search
-      </h1>
+      <a href="/" className="brand-logo">Google Book Search</a>
+      <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <li><a href="/books/saved">Saved</a></li>
+      </ul>
     </div>
     </nav>
   );

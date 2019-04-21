@@ -5,11 +5,15 @@ const booksController = require("../../controllers/booksController");
 router.route("/")
     //route to get all saved books
     .get(booksController.findAll)
-    //route to create a new saved book
+//route to create a new saved book
+// .post(booksController.create);
+
+//Server route to add new saved book to DB
+router.route("/")
     .post(booksController.create);
 
 //Matches with "api/books/:id"
-router  
+router
     .route("/:id")
     .get(booksController.findById)
     //route to save a book
