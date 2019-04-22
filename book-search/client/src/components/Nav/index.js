@@ -7,7 +7,8 @@ function Nav() {
     <div className="nav-wrapper z-depth-3">
       <a href="/" className="brand-logo">Google Book Search</a>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li><a href="/books/saved">Saved</a></li>
+        <li><a href="/" className="navLink">HOME</a></li>
+        <li><a href="/books/saved" className="navLink">SAVED</a></li>
       </ul>
     </div>
     </nav>

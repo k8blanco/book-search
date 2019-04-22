@@ -5,10 +5,14 @@ import "./style.css";
 // That way we don't have to define them all individually
 export function SaveBtn(props) {
   return (
-    <button {...props} className="save-btn btn waves-effect waves-light z-depth-2"> 
+    <div className="row">
+    <div className="col s1 push-s11">
+    <button {...props} className="save-btn light-green darken-4 btn waves-effect waves-light z-depth-2"> 
       {props.children}
-      Save!
+      <i className="fas fa-star"></i>
     </button>
+    </div>
+    </div>
   );
 }
 

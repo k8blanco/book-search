@@ -6,8 +6,7 @@ import { List, ListItem } from "../components/List";
 import NoResult from "../components/NoResult";
 import SaveBtn from "../components/SaveBtn";
 import { ToastsContainer, ToastsStore } from 'react-toasts';
-// import { List, ListItem } from "../components/List";
-// import ComponentItem from "../components/Result/ComponentItem";
+
 
 class Books extends Component {
   state = {
@@ -85,7 +84,6 @@ loadBooks = () => {
             </div>
               
               {this.state.results && this.state.results.length ? (
-                <div className="container">
                 <List>
                   {this.state.results.map(book => {
                     return (
@@ -96,19 +94,17 @@ loadBooks = () => {
                           synopsis = {book.volumeInfo.description}
                           thumbnail = {book.volumeInfo.imageLinks.thumbnail}
                         >
-                        <img alt={book.volumeInfo.imageLinks.thumbnail} src={book.volumeInfo.imageLinks.thumbnail} />
-                        <span className="title">{book.volumeInfo.title} by {book.volumeInfo.authors}</span>
-                        <p>{book.volumeInfo.description}</p>
-
-                        <a href={"/books/" + book._id}>
-                        </a>
                         <SaveBtn onClick={() => this.handleSave(book)} />
+                        <img alt={book.volumeInfo.imageLinks.thumbnail} src={book.volumeInfo.imageLinks.thumbnail} className="circle" />
+                        <span className="title" style={{ fontSize: 30, fontFamily: "'Sorts Mill Goudy', serif" }}>{book.volumeInfo.title} by {book.volumeInfo.authors}</span>
+                        <p style={{ marginTop: 20, marginBottom: 20 }}>{book.volumeInfo.description}</p>
+
+                        
                         <ToastsContainer store={ToastsStore}/>
                       </ListItem>
                     );
                   })}
-                  </List>
-                  </div>
+                  </List>                
               ) : (
                 <NoResult />
               )

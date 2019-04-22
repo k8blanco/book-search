@@ -1,0 +1,14 @@
+.collection-item {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 20px;
+}
+
+.listCard {
+    background-color: #33691e;
+}
+
+.bookCard {
+    overflow: scroll;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
