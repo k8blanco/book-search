@@ -6,12 +6,12 @@ import "./style.css";
 export function SaveBtn(props) {
   return (
     <div className="row">
-    <div className="col s1 push-s11">
-    <button {...props} className="save-btn light-green darken-4 btn waves-effect waves-light z-depth-2"> 
-      {props.children}
-      <i className="fas fa-star"></i>
-    </button>
-    </div>
+      <div className="col s1 push-s11">
+        <button {...props} className="save-btn light-green darken-4 btn waves-effect waves-light z-depth-2"> 
+          {props.children}
+          <i className="fas fa-star"></i>
+        </button>
+      </div>
     </div>
   );
 }

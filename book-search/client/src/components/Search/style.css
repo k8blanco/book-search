@@ -5,3 +5,7 @@ h2 {
 button {
     font-family: 'Sorts Mill Goudy', serif;
 }
+
+.search-btn {
+    background-color: #33691e;
+}

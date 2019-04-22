@@ -32,19 +32,16 @@ class Saved extends Component {
     
     render() {
         return (
-        <div>
-            <div className="container">
-                {this.state.books.length ? (
-                    <List>
-                        {this.state.books.map(book => {
-                            return (
+        <div style={{ marginTop: 60 }}>
+            <h2 className="center" style={{ marginBottom: 40 }}>Saved Books</h2>
+            {this.state.books.length ? (
+                <List>
+                    {this.state.books.map(book => {
+                        return (
                             <ListItem key={book._id}>
-                                <a href={"/books/" + book._id}>
-                                    <strong>
-                                        {book.title} by {book.author}    
-                                    </strong>
-                                </a>
-                                <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                            <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                                <span className="title" style={{ fontSize: 30, fontFamily: "'Sorts Mill Goudy', serif" }}>{book.title} by {book.author}</span>
+                                <p style={{ marginTop: 20, marginBottom: 20 }}>{book.synopsis}</p>
                             </ListItem>
                             );
                         })}
@@ -52,9 +49,7 @@ class Saved extends Component {
                 ) : (
                     <h3>No Saved Books Yet</h3>
                     )
-                
-                }
-            </div>
+            }
         </div>
         )
     }

@@ -18,7 +18,8 @@ class Books extends Component {
 
   //When this component mounts, search for the book "Throne of Glass"
   componentDidMount() {
-    this.searchBooks("ThroneofGlass");
+    //set default book search
+    this.searchBooks("Les Miserables");
   }
 
   searchBooks = query => {
